@@ -2,24 +2,18 @@ package com.nsag.springbranch.Empmangement.service;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-
-
-import org.hibernate.Session;
-import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.nsag.springbranch.Empmangement.dao.EmployeeDaoImp;
+import com.nsag.springbranch.Empmangement.dao.EmployeeDao;
 import com.nsag.springbranch.Empmangement.entity.Employee;
 
 @Service
 public class EmployeeServiceImp implements EmployeeService {
 
 	@Autowired
-	public EmployeeDaoImp EmployeeDao;
+	public EmployeeDao EmployeeDao;
 	
 	@Override
 	@Transactional
@@ -44,7 +38,7 @@ public class EmployeeServiceImp implements EmployeeService {
 	@Transactional
 	public Employee getEmployee(int id) {
 	
-		return getEmployee(id);
+		return EmployeeDao.getEmployee(id);
 	}
 
 }

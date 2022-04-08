@@ -15,14 +15,14 @@ public class Employee {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
-	@Column(name="firstnName")
+	@Column(name="firstname")
 	private String firstName;
 	@Column(name="lastname")
 	private String lastName;
 	@Column(name="email")
 	private String email;
-	@Column(name="mobileno")
-	private String mobileNo;
+	@Column(name="mobilno")
+	private String mobilNo;
 	public int getId() {
 		return id;
 	}
@@ -48,15 +48,15 @@ public class Employee {
 		this.email = email;
 	}
 	public String getMobileNo() {
-		return mobileNo;
+		return mobilNo;
 	}
-	public void setMobileNo(String mobileNo) {
-		this.mobileNo = mobileNo;
+	public void setMobilNo(String mobileNo) {
+		this.mobilNo = mobileNo;
 	}
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", mobileNo=" + mobileNo + "]";
+				+ ", mobileNo=" + mobilNo + "]";
 	}
 
 	
